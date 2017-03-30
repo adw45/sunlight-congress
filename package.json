@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/adw45/sunlight-congress#readme",
   "dependencies": {
-    "hapi": "^16.1.0"
+    "hapi": "^16.1.0",
+    "request": "^2.81.0"
   }
 }
