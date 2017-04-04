@@ -12,6 +12,12 @@ const vote_totals = '?chamber=senate&order=voted_at&breakdown&fields=chamber,con
             (err, response, body) => {
                  reply(err || JSON.parse(body));
             });
+    },
+    votesByChamber(req, reply) {
+        request(route_url + vote_totals + '&chamber=' + req.params.chamber + '&per_page=' + req.query.count + '&page=' + req.query.page, 
+            (err, response, body) => {
+                reply(err || JSON.parse(body));
+            });
     }
  }
 
