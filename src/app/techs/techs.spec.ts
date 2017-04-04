@@ -1,3 +1,5 @@
+/// <reference path="../../app.d.ts" />
+
 import {MockBackend, MockConnection} from '@angular/http/testing';
 import {Http, BaseRequestOptions, Response, ResponseOptions} from '@angular/http';
 import {Component, Input} from '@angular/core';

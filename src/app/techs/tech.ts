@@ -1,3 +1,5 @@
+/// <reference path="../../app.d.ts" />
+
 import {Component, Input} from '@angular/core';
 import {Tech} from './techs';
 

@@ -16,14 +16,15 @@ gulp.task('test:auto', gulp.series('karma:auto-run'));
 gulp.task('serve', gulp.series('webpack:watch', 'watch', 'browsersync'));
 gulp.task('serve:dist', gulp.series('default', 'browsersync:dist'));
 gulp.task('default', gulp.series('clean', 'build'));
+gulp.task('server', gulp.series('server:nodemon'));
 gulp.task('watch', watch);
 
 function reloadBrowserSync(cb) {
-  browserSync.reload();
-  cb();
+    browserSync.reload();
+    cb();
 }
 
 function watch(done) {
-  gulp.watch(conf.path.tmp('index.html'), reloadBrowserSync);
-  done();
+    gulp.watch(conf.path.tmp('index.html'), reloadBrowserSync);
+    done();
 }

@@ -1,3 +1,5 @@
+/// <reference path="../app.d.ts" />
+
 import {HeaderComponent} from './header';
 import {TestBed, async} from '@angular/core/testing';
 

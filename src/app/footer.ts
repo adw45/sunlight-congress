@@ -1,3 +1,5 @@
+/// <reference path="../app.d.ts" />
+
 import {Component} from '@angular/core';
 
 @Component({

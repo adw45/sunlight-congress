@@ -1,3 +1,5 @@
+/// <reference path="./app.d.ts" />
+
 import 'core-js/client/shim';
 import 'zone.js/dist/zone';
 
