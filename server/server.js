@@ -1,28 +1,15 @@
 'use strict';
 
 const Hapi = require('hapi');
+const voteController = require('./controllers/votes.js');
 
 const server = new Hapi.Server();
 server.connection({ port: 3000, host: 'localhost' });
 
-server.route({
-    method: 'GET',
-    path: '/',
-    handler: function (request, reply) {
-        reply('Hello, world!');
-    }
-});
-
-server.route({
-    method: 'GET',
-    path: '/{name}',
-    handler: function (request, reply) {
-        reply('Hello, ' + encodeURIComponent(request.params.name) + '!');
-    }
-});
+server.route({ method: 'GET', path: '/health', handler: (request, reply) => { reply('Server is running'); } });
+server.route({ method: 'GET', path: '/votes/{id}', handler: voteController.voteById });
 
 server.start((err) => {
-
     if (err) {
         throw err;
     }
