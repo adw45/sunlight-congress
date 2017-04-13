@@ -2,8 +2,8 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {HttpModule} from '@angular/http';
 
-import {TechsComponent} from './techs';
-import {TechComponent} from './tech';
+import {BillsComponent} from './bills';
+import {BillComponent} from './bill';
 
 @NgModule({
   imports: [
@@ -11,11 +11,11 @@ import {TechComponent} from './tech';
     HttpModule
   ],
   declarations: [
-    TechsComponent,
-    TechComponent
+    BillsComponent,
+    BillComponent
   ],
   exports: [
-    TechsComponent
+    BillsComponent
   ]
 })
-export class TechsModule {}
+export class BillsModule {}
